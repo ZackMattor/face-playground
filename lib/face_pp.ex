@@ -4,6 +4,7 @@ defmodule FacePP do
   @api_key System.get_env("FACEPP_API_KEY")
   @api_secret System.get_env("FACEPP_API_SECRET")
 
+  # test-face: http://www.rantlifestyle.com/wp-content/uploads/2014/03/1.-Ryan-Gosling.jpg
   def detect(url) do
     FacePP.start
     FacePP.get!("/detection/detect?api_key=#{@api_key}&api_secret=#{@api_secret}&url=#{url}").body
